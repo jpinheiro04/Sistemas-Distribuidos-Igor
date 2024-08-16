@@ -1,1 +1,14 @@
+Aula 2 
 
+Usuário não pode saber informações ocultas sobre a arquitetura e localização do recursos
+
+Migração: Oculta que um recurso por completo muda para outro servidor
+Realocação: Oculta que um recurso pode ser movido para outra localização enquanto em uso
+Concorrênte: Oculta que um recurso pode ser compartilhado por diversos usuários concorrentes 
+Falha: Oculta a falha e a recuperação de um recurso
+
+Explique oque se entende por transparência (de distribuição) ?
+
+Por que ás vezes é tão dificill esconder a ocorrência e recuperação de falhas em um sistema distribuido ?
+R: Geralmente é impossivel detectar se um servidor está realmente desativado, ou está simplesmente lento em responder.
+Consequentemente, um sistema pode ter que reportar que um serviço não está disponivel, embora, de fato, o servidor está apenas lento
