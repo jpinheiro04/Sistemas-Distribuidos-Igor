@@ -12,3 +12,14 @@ Explique oque se entende por transparência (de distribuição) ?
 Por que ás vezes é tão dificill esconder a ocorrência e recuperação de falhas em um sistema distribuido ?
 R: Geralmente é impossivel detectar se um servidor está realmente desativado, ou está simplesmente lento em responder.
 Consequentemente, um sistema pode ter que reportar que um serviço não está disponivel, embora, de fato, o servidor está apenas lento
+
+Escalabilidade
+
+Podem ser relacionadas ao tamanho, termo geográfico e termos admnistrativos
+
+Tamanho: É facil adicionar mais usuarios e recursos ao sistema
+
+Termo Geográficos: Usuário e recursos podem estar longe dos outros
+
+Termos Administativos: ainda pe facil de gerenciar o sistema, mesmo que abranja muitas organizações administrativas diferentes. EX. Leis de Paises.
+
