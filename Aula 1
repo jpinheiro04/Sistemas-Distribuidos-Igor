@@ -1,18 +1,18 @@
 Aula 2 
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Usuário não pode saber informações ocultas sobre a arquitetura e localização do recursos
 
 Migração: Oculta que um recurso por completo muda para outro servidor
 Realocação: Oculta que um recurso pode ser movido para outra localização enquanto em uso
 Concorrênte: Oculta que um recurso pode ser compartilhado por diversos usuários concorrentes 
 Falha: Oculta a falha e a recuperação de um recurso
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Explique oque se entende por transparência (de distribuição) ?
 
 Por que ás vezes é tão dificill esconder a ocorrência e recuperação de falhas em um sistema distribuido ?
 R: Geralmente é impossivel detectar se um servidor está realmente desativado, ou está simplesmente lento em responder.
 Consequentemente, um sistema pode ter que reportar que um serviço não está disponivel, embora, de fato, o servidor está apenas lento
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Escalabilidade
 
 Podem ser relacionadas ao tamanho, termo geográfico e termos admnistrativos
@@ -22,4 +22,15 @@ Tamanho: É facil adicionar mais usuarios e recursos ao sistema
 Termo Geográficos: Usuário e recursos podem estar longe dos outros
 
 Termos Administativos: ainda pe facil de gerenciar o sistema, mesmo que abranja muitas organizações administrativas diferentes. EX. Leis de Paises.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Técnivas de Escalabilidade
 
+Após ver alguns problemas de escabilidade, surge a questão de como resolvê-los Na maioria dos casos, os problemas de escabilidade aparecem como problemas de desempenho causado
+pela capacidade limitada de servidores e redes. Existem basicamente três técnicas a serem consideradas
+
+Latência de comunicação: Tentar evitar esperar por respostas a requisições remotas.
+
+Distribuição: Envolve subdividir um componente em partes menores, e espalhar esses comportamentos pelo sistema.
+
+Replicação: Aumentar a disponibilidade, ajuda a dividir a carga e diminui a latência por ter uma cópia perto.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
