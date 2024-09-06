@@ -1,0 +1,85 @@
+Requisitos e Projeto para Arquiteturas Distribuidas
+
+. Dependabilidade:
+  - Corretude.
+  - Tolerância a falhas.
+  - Segurança.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Modelos Fundamentais de Sistemas Distribuídos
+
+. Um modelo contém apenas o essencial para que possamos entender a raciocinar de aspectos do comportamento de um sistema.
+
+. Questões importantes na modelagem:
+  - Quais são as principais entidades do sistema?
+  - Como elas interagem?
+  - Quais são as caracteristicas que afetam seu comportamento individual e coletivo?
+
+. Objetivos
+  - Tornar explícitas todas as suposições relevantes sobre os sistemas que estamos modelando.
+  - Fazer generalizações a respeito.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+. Interações: deve refletir o fato de que a comunicação ocorre com atrasos, que, fraquentemente, têm duração consideralvel.
+
+. Falha: define e classifica as formas pelas quais o sistema pode falhar.
+
+. Segurança: define e classifica as formas de ataque que podem comprometer o sistema.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Modelo de interação 
+
+Sistemas distribuidos são compostos por vários processos que interagem entre si.
+
+. Exemplos: 
+  - Vários processos servidores podem cooperar entre si para fornecer um serviço.
+  - Um consjunto de processos peer to peer pode cooperar entre si para atingir um objetivo em comum.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Fatores que afetam a interação
+
+. Desempenho dos canais de comunicação:
+
+  - Latência: tempo entre o início da transmissão da uma mensagem do processo de origem até o início da recepção pelo processo de destino.
+  - Largura de banda: volume total de dados que podem ser transmitidos em um certo tempo.
+  - Jitter: variação no tempo de transmissão de uma série de mensagens.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Fatores que afetam a interação 
+
+. Relógios e temporização de eventos
+  - Cada computador possui seu próprio relógio
+  - Processos em máquinas diferentes podem  associar tempos diferentes aos seus eventos, mesmo lendo seus relógios ao mesmo tempo
+  - drift ou taxa de desvio do tempo real faz os relógios divergiram
+  - Como saber qual evento aconteceu em um sistema distribuido?
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Modelo de falhas
+. Em um sistema distribuido, tanto os processos como os canais de comunicação podem falhar
+  - Falha: sair do comportamento esperado
+
+. Tipos de falha:
+  - omissão
+  - Tempo
+  - Arbitraria
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Falhas por omissão
+
+. Em processos: 
+  - Crash: parar para sempre, outros não notam
+  - Fail-stop: parar sempre, perceptível
+    . Exemplo: timeout em sistemas
+
+. Em canais de comunicação: 
+  - Mensagem enviada não chega ao destino
+  .Exemplo: drop no roteador
+
+. Ambas 
