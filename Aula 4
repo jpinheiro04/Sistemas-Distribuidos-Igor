@@ -82,4 +82,36 @@ Falhas por omissão
   - Mensagem enviada não chega ao destino
   .Exemplo: drop no roteador
 
-. Ambas 
+. Ambas são considerados falhas "benignas" 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Falahas Arbitrárias (ou Bizantinas)
+
+. Qualquer tipo de erro pode ocorrer
+  - Ex: processos respondem com valores incorretos
+
+. Em processos:
+  - Processo omite passos esperados do processamento ou realiza passos indesejados
+
+. Em canais de comunicação:
+  - Mensagens corrompidas, envio de mensagens inexistentes, vários envios da mesma mensagem
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Falhas de tempo
+
+. Acontecem quando limites de tempo são desrespeitados em sistemas síncronos
+  - Falha de relógio: o relógio local do processo ultrapassa os limites de sua taxa de desvio em relação ao tempo real
+  - Falha de desempenho (processo): o processo ultrapassa os limites de tempo entre duas etapas
+  - Falha de desempenho
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Modelo de segurança
+
+. Normalmente modelamos um adversário (ou inimigo), suas capacidades e seus recursos
+
+. A partir dele, fazemos um modelo de ameaças
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
