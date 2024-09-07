@@ -129,3 +129,21 @@ Ameaças aos processos
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Lidando com ameaças
+
+. Criptografia: ciência de manter mensagens seguras
+  - Criptografar: embaralhar de forma a só ser desembarlhado por quem conhece uma chave
+  - É possível perceber se alguém alterou uma mensagem criptografada
+
+. Autenticação: prova uma identidade usando criptografia
+
+. Autorização: define que identidades podem fazer o que
+
+. Com autenticação + criptografia temos canais seguros:
+  - Partes sabem a identidade do outro lado do canal
+  - Esses canais provêm confidencialidade e integridade
+  - SSL provê essa abstração para um desenvolvedor
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Esteganografia: é a prática de ocultar informações dentro de outra mensagem ou objeto físico para evitar a detecção.
