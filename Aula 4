@@ -82,7 +82,7 @@ Falhas por omissão
   - Mensagem enviada não chega ao destino
   .Exemplo: drop no roteador
 
-. Ambas são considerados falhas "benignas" 
+. Ambas são considerados falhas "benignas" e são as mais frequentes
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -104,7 +104,7 @@ Falhas de tempo
 . Acontecem quando limites de tempo são desrespeitados em sistemas síncronos
   - Falha de relógio: o relógio local do processo ultrapassa os limites de sua taxa de desvio em relação ao tempo real
   - Falha de desempenho (processo): o processo ultrapassa os limites de tempo entre duas etapas
-  - Falha de desempenho
+  - Falha de desempenho (canal): a transmissão de uma mensagem demora mais do que o limite definido
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -115,3 +115,17 @@ Modelo de segurança
 . A partir dele, fazemos um modelo de ameaças
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Ameaças aos processos
+
+. O adversário é capaz de fazer requisições não-autorizadas
+  - Conexão sem SSL
+  - Serviços sem senha
+
+. É necessário que o seviço seja capaz de verificar a identidade do requisitante
+
+. E o mesmo vale se o adversário puder se passar pelo servidor
+  - O cliente deve conseguir verificar a identidade do servidor
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
