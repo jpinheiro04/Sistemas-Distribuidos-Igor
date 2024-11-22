@@ -1,0 +1,216 @@
+Resumo: Sistemas Distribuídos (SD)
+Definição de Sistemas Distribuídos
+Um Sistema Distribuído (SD) é composto por computadores independentes que trabalham em conjunto para se apresentarem ao usuário como um único sistema coerente e transparente.
+Exemplos: Serviços na Web, computação paralela.
+
+Características Principais
+Independência: Cada computador pode operar individualmente.
+Transparência: Esconde diferenças de hardware, localização e comunicação do usuário.
+Papel do Middleware
+Atua como intermediário entre componentes heterogêneos.
+Aumenta a transparência, permitindo que os sistemas pareçam únicos aos usuários.
+Metas de Sistemas Distribuídos
+Acesso a Recursos: Controlado e eficiente; melhora a segurança e privacidade.
+Transparência:
+De Acesso: Esconde diferenças de arquitetura (x86, ARM).
+De Localização: Oculta onde os recursos estão.
+De Migração e Realocação: Movimenta recursos sem impactar os usuários.
+De Replicação: Oculta a existência de múltiplas cópias.
+De Concorrência: Garante consistência ao lidar com múltiplos acessos.
+De Falhas: Minimiza os impactos visíveis de falhas.
+Abertura: Permite interoperabilidade, portabilidade e extensibilidade.
+Escalabilidade: Suporta mais usuários, recursos e grandes distâncias geográficas.
+Técnicas de Escalabilidade
+Latências de Comunicação: Evitar espera em requisições.
+Distribuição: Dividir componentes e espalhá-los no sistema.
+Replicação: Reduz latência, melhora desempenho e disponibilidade.
+Tipos de Sistemas Distribuídos
+Cluster: Vários computadores conectados para simular um supercomputador.
+Desafios Comuns
+Garantir confiabilidade em redes instáveis.
+Lidar com inconsistências de dados em replicações.
+Manter transparência sem prejudicar o desempenho.
+Questões e Respostas
+Definição Alternativa: Um SD que parece um único sistema é útil para computação paralela.
+Papel do Middleware: Melhorar a transparência de distribuição.
+Transparência de Distribuição: Esconde aspectos de distribuição, como localização e replicação.
+Ocultar Falhas é Difícil: Falhas podem ser confundidas com lentidão.
+Alto Grau de Transparência: Pode prejudicar o desempenho.
+Sistema Aberto: Facilita integração e portabilidade entre sistemas.
+Escalabilidade: Obtida por comunicação assíncrona, distribuição e replicação.
+
+
+
+
+
+
+
+
+Resumo da Aula 08: Sistemas de Arquivos Distribuídos (SADs)
+Definições
+Coulouris: SAD permite que programas acessem arquivos remotos como locais, facilitando o uso em qualquer máquina da rede.
+Tanenbaum: SADs são essenciais para compartilhar dados de forma confiável e segura por longos períodos.
+Características Principais
+Semelhantes a sistemas de arquivos locais: Porém, acessíveis remotamente.
+Transparências:
+Nome: O nome do arquivo não revela sua localização.
+Localização: O usuário não precisa saber onde o arquivo está fisicamente.
+Acesso: Arquivos locais e remotos parecem iguais.
+Replicação: Várias cópias aparentam ser um único arquivo.
+Concorrência: Suporte a múltiplos acessos simultâneos sem conflitos.
+Falha: Tolerância a falhas sem impactar o usuário.
+Serviços Oferecidos
+Serviço de Nomes Distribuído: Localiza arquivos pelo nome, mantendo transparência de localização.
+Serviço de Arquivos Distribuído: Permite operações como leitura, escrita, controle de permissões e integridade.
+Implementações:
+Acesso remoto: Operações diretamente no servidor.
+Cópia remota: Arquivo transferido para o cliente, alterado localmente, e devolvido ao servidor.
+Serviço de Diretórios Distribuído: Organização hierárquica para facilitar navegação e acesso.
+Arquitetura de SAD
+Componentes:
+Serviço de arquivos plano: Gerencia armazenamento e operações básicas.
+Serviço de diretório: Oferece organização lógica de arquivos.
+Módulo cliente: Interface para o usuário.
+Funcionalidades e Requisitos
+Tolerância a falhas: Sistema continua funcional mesmo com quedas de servidores.
+Acesso concorrente: Múltiplos usuários acessam arquivos simultaneamente sem impacto.
+Replicação de arquivos: Melhora confiabilidade e desempenho.
+Heterogeneidade: Compatível com diferentes sistemas operacionais e hardware.
+Segurança: Controle de acesso, autenticação e proteção das comunicações.
+Pontos Importantes
+Serviço de montagem: Conexão entre sistemas de arquivos locais e distribuídos.
+Sincronização: Garante consistência em arquivos replicados.
+Consistência e replicação: Mantém dados atualizados e disponíveis.
+Segurança: Proteção contra acessos não autorizados.
+Esse conteúdo destaca a relevância dos SADs em ambientes distribuídos e os desafios associados à sua implementação.
+
+
+
+
+
+
+
+Resumo da Aula 11: Segurança em Sistemas Distribuídos
+Introdução à Segurança
+Confiabilidade: A segurança é essencial para garantir que os sistemas de computação sejam confiáveis, o que envolve:
+Confidencialidade: Garantir que as informações sejam acessíveis apenas a entidades autorizadas.
+Integridade: Assegurar que ativos sejam manipulados apenas por entidades autorizadas.
+Ameaças à Segurança
+Principais ameaças:
+
+Interceptação: Captura não autorizada de dados.
+Interrupção: Interrupção de serviços ou acessos.
+Modificação: Alteração de dados sem permissão.
+Invenção: Criação de dados falsos.
+Políticas de segurança: Definem o que entidades podem ou não fazer.
+
+Mecanismos de segurança: Ferramentas usadas para implementar essas políticas, como criptografia, autenticação, autorização e auditoria.
+
+Mecanismos de Segurança
+Criptografia: Protege dados, tornando-os incompreensíveis para atacantes.
+Autenticação: Verifica a identidade de usuários ou sistemas.
+Autorização: Define se a entidade autenticada tem permissão para realizar uma ação.
+Auditoria: Monitora e registra acessos a dados, permitindo rastrear atividades.
+Questões de Projeto de Segurança
+Foco de Controle: Define quem controla o que no sistema.
+Simplicidade: Os mecanismos de segurança devem ser simples de implementar e administrar, sem comprometer a eficácia.
+Confiança x Segurança
+Exemplos de confiança:
+Ferrari: É seguro comprar uma Ferrari? A confiança é na empresa que a fabrica.
+Mastercard: Pode-se confiar no cartão para realizar compras seguras? A segurança está no processo de transação.
+Canais Seguros
+Um canal seguro protege contra:
+Interceptação: Mantendo a confidencialidade.
+Modificação e invenção de mensagens: Usando protocolos para autenticação e integridade.
+Interrupção: Não é necessariamente evitada por canais seguros.
+Autenticação e Integridade
+Autenticação: Garante que quem envia a mensagem é realmente quem diz ser.
+Integridade: Assegura que a mensagem não foi alterada.
+Confidencialidade: Usada para proteger dados com criptografia.
+Controle de Acesso
+Controle de Acesso: Verifica se um cliente tem permissão para executar uma ação.
+Autorização: Após autenticação, o sistema verifica se a ação solicitada é permitida.
+Firewalls: Usados para proteger sistemas distribuídos, inspecionando e bloqueando pacotes de dados não autorizados.
+Tipos de Firewalls
+Gateway de Filtragem de Pacotes: Analisa os cabeçalhos dos pacotes para decidir se eles devem ser transmitidos.
+Gateway de Nível de Aplicação: Inspeciona o conteúdo da mensagem para detectar problemas como SPAM ou vírus.
+Ataques de Recusa de Serviço (DoS)
+DoS e DDoS: Ataques que sobrecarregam o sistema, impedindo o acesso aos recursos.
+Proteção: Não existe uma solução única, mas técnicas como o uso de firewalls podem ajudar.
+Prática com Firewalls - IPTables
+IPTables é uma ferramenta de firewall no Linux que permite controlar o tráfego de rede, permitindo ou bloqueando pacotes de dados conforme regras configuradas. Durante a aula prática, será usada uma VM Linux Mint para aplicar essas configurações.
+Este conteúdo aborda como os sistemas distribuídos lidam com a segurança, incluindo a proteção contra ameaças, autenticação, controle de acesso, e uso de firewalls para manter a integridade e confidencialidade dos dados.
+
+
+
+
+
+
+
+A Aula 12 abrange a Computação em Nuvem com diversos tópicos essenciais. Vou te apresentar um resumo detalhado para ajudar nos seus estudos.
+
+1. Computação em Nuvem
+A computação em nuvem permite acessar informações e serviços pela internet, eliminando a necessidade de armazenamento local. As vantagens incluem:
+
+Redução de custo e manutenção de hardware;
+Acessibilidade global;
+Flexibilidade, com atualizações automáticas de software.
+2. Características de uma Nuvem
+Segundo o NIST (2011), uma nuvem deve apresentar características essenciais:
+
+Autoatendimento sob demanda: serviços computacionais são fornecidos automaticamente sem intervenção humana.
+Amplo acesso a serviço de rede: recursos são acessíveis via internet.
+Pool de recursos: recursos computacionais são compartilhados entre múltiplos usuários.
+Elasticidade rápida: funcionalidades devem ser escaláveis e fornecidas sob demanda.
+Serviços mensuráveis: uso de recursos é monitorado e transparente.
+3. Tipos de Serviços
+A computação em nuvem pode ser dividida em três modelos de serviço:
+
+IaaS (Infraestrutura como Serviço): Fornecimento de recursos básicos de infraestrutura, como servidores, armazenamento e redes.
+PaaS (Plataforma como Serviço): Fornecimento de plataformas para desenvolvimento e hospedagem de aplicativos.
+SaaS (Software como Serviço): Aplicações completas oferecidas como serviços sob demanda (por exemplo, Google Docs).
+4. Arquitetura das Nuvens
+A arquitetura das nuvens é dividida em 4 camadas:
+
+Camada de Hardware/Datacenter: Infraestrutura física de servidores e redes.
+Camada de Infraestrutura: Abstração de recursos físicos.
+Camada de Plataforma: Ferramentas e APIs para desenvolvimento de software.
+Camada de Aplicação: Aplicações de software que utilizam os recursos da nuvem.
+5. Modelos de Implementação da Nuvem
+Nuvem Privada: Infraestrutura exclusiva de uma organização.
+Nuvem Pública: Infraestrutura compartilhada disponível para o público.
+Nuvem Híbrida: Combinação de nuvens privadas e públicas.
+Nuvem Comunitária: Infraestrutura compartilhada por várias organizações com interesses comuns.
+6. Tolerância a Falhas
+Sistemas distribuídos devem ser projetados para tolerar falhas:
+
+Disponibilidade: Sistema deve estar sempre pronto para uso.
+Confiabilidade: Sistema deve funcionar sem falhas.
+Segurança: Sistema deve ser protegido contra falhas catastróficas.
+Capacidade de manutenção: Facilidade em realizar manutenção.
+Classificação de falhas:
+
+Falhas transientes: Aparecem e desaparecem.
+Falhas intermitentes: Aparecem e desaparecem repetidamente.
+Falhas permanentes: Persistem até que o componente defeituoso seja substituído.
+7. Exemplos de Nuvens Pagas
+AWS (Amazon Web Services): Oferece recursos como EC2 e EBS com alta disponibilidade.
+XenServer: Permite migração ao vivo de máquinas virtuais.
+vSphere: Oferece alta disponibilidade e recursos de proteção de dados.
+8. OpenStack
+O OpenStack é uma solução open-source para IaaS, mantida por uma comunidade global. Foi iniciado pela NASA e pela Rackspace, oferecendo serviços como:
+
+Nova: Controle de instâncias de máquinas virtuais.
+Swift: Armazenamento de objetos.
+Glance: Serviço de imagens de máquinas virtuais.
+Dashboard: Interface para gerenciar recursos na nuvem.
+Esses tópicos fornecem uma base sólida sobre os principais conceitos de computação em nuvem. Se precisar de mais detalhes sobre algum ponto específico, só avisar!
+
+
+
+
+
+
+
+
+
